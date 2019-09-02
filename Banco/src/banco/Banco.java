@@ -5,6 +5,7 @@
  */
 package banco;
 
+import controller.CtrlLogin;
 import ventanas.Registro;
 import ventanas.Login;
 
@@ -19,9 +20,10 @@ public class Banco {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        Login v1= new Login ();
-        Registro v2= new Registro();
-        v1.setVisible(true);
+        
+        Login view= new Login();
+        CtrlLogin controller= new CtrlLogin (view);
+        controller.init();
     }
     
 }
